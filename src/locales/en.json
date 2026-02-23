@@ -1,0 +1,146 @@
+{
+    "translation": {
+        "header": {
+            "services": "Services",
+            "whyUs": "Why Us",
+            "about": "About",
+            "contact": "Contact",
+            "getStarted": "Get Started"
+        },
+        "hero": {
+            "badge": "New High-Performance Hosting",
+            "title1": "Your Digital Presence,",
+            "title2": "Elevated",
+            "title3": "Beyond the Clouds",
+            "subtitle": "Seamless software development and high-performance hosting solutions tailored for your business growth. Experience the freedom of a limitless sky.",
+            "cta": "Start Your Project"
+        },
+        "services": {
+            "software": {
+                "badge": "Software Expertise",
+                "title1": "Custom",
+                "title2": "Software Solutions",
+                "subtitle": "Whether you need a showcase site, an online store, or a management platform for your association, Habaka offers comprehensive and flexible solutions.",
+                "showcase": {
+                    "title": "Showcase sites",
+                    "desc": "Enhance your brand image."
+                },
+                "ecommerce": {
+                    "title": "E-commerce sites",
+                    "desc": "Grow your online sales."
+                },
+                "blogs": {
+                    "title": "Pro blogs",
+                    "desc": "Share your expertise."
+                },
+                "portfolios": {
+                    "title": "Portfolios",
+                    "desc": "Showcase your best creations."
+                },
+                "redesign": {
+                    "title": "Website redesign",
+                    "desc": "Modernize your digital presence without losing your achievements."
+                }
+            },
+            "maintenance": {
+                "badge": "Long Term Partnership",
+                "title1": "Maintenance and",
+                "title2": "Continuous Support",
+                "subtitle": "Your business is evolving, and so is your website. More than just a provider, we are your long-term partner to guarantee performance and security.",
+                "updates": {
+                    "title": "Regular updates",
+                    "desc": "We ensure your systems stay at the forefront of technology and security."
+                },
+                "support": {
+                    "title": "Responsive support",
+                    "desc": "A question? A need? Our technical team will answer you as soon as possible."
+                },
+                "reports": {
+                    "title": "Simplified reports",
+                    "desc": "Understand the health of your infrastructure with clear, actionable reports."
+                },
+                "advice": {
+                    "title": "Proactive advice",
+                    "desc": "We anticipate your needs to optimize your tools even before you ask."
+                }
+            },
+            "hosting": {
+                "badge": "Sovereign Hosting",
+                "title1": "Your Digital",
+                "title2": "Safe",
+                "subtitle": "Protect and centralize files essential to your business. Enjoy a robust infrastructure with data hosted in Canada or locally for complete sovereignty.",
+                "cta": "Secure my data",
+                "features": {
+                    "f1": "Data hosted in Canada",
+                    "f2": "Easy and secure access",
+                    "f3": "Simplified file sharing",
+                    "f4": "Automatic backups",
+                    "f5": "Local support"
+                }
+            }
+        },
+        "whyUs": {
+            "badge": "The Habaka Advantage",
+            "title": "Why Choose Habaka",
+            "subtitle": "We believe in a digital world that is fast, stable, and incredibly simple to manage.",
+            "simplicity": {
+                "title": "Simplicity",
+                "desc": "Streamlined processes that turn complexity into clarity. We remove the noise so you can focus on what matters most."
+            },
+            "tailored": {
+                "title": "Tailored Solution",
+                "desc": "Custom-built software designed to fit your unique business DNA. No templates, just perfectly aligned engineering."
+            },
+            "support": {
+                "title": "Good Support",
+                "desc": "A dedicated team that’s always reachable, ensuring you're never in the dark. We are partners in your long-term success."
+            },
+            "stability": {
+                "title": "Stability",
+                "desc": "Reliable hosting and robust code that scales with your ambition. Built to withstand the demands of global infrastructure."
+            },
+            "responsible": {
+                "title": "Responsible Choice",
+                "desc": "Ethical development and sustainable practices for a long-term partnership. We believe in building software that makes a positive impact on the digital landscape."
+            },
+            "ctaBox": {
+                "title": "Ready to elevate your project?",
+                "subtitle": "Join 500+ businesses growing on the Habaka platform.",
+                "button": "Schedule a Consultation"
+            }
+        },
+        "contact": {
+            "badge": "Contact Our Team",
+            "title1": "Let’s build something great",
+            "title2": "together.",
+            "subtitle": "We’re here to help you turn your ideas into reality. Reach out and let's start a conversation about your next project.",
+            "form": {
+                "name": "Full Name",
+                "namePlaceholder": "e.g. John Doe",
+                "email": "Email Address",
+                "emailPlaceholder": "name@company.com",
+                "subject": "Subject",
+                "subjectPlaceholder": "Select a topic",
+                "options": {
+                    "web": "Web Development",
+                    "mobile": "Mobile Apps",
+                    "cloud": "Cloud Solutions",
+                    "consulting": "General Inquiry"
+                },
+                "message": "Message",
+                "messagePlaceholder": "Tell us about your project...",
+                "submit": "Send Message"
+            },
+            "methods": {
+                "email": "hello@habaka.io",
+                "location": "San Francisco, CA",
+                "time": "Mon-Fri, 9am - 6pm"
+            }
+        },
+        "footer": {
+            "rights": "© {{year}} Habaka Digital Solutions. All rights reserved.",
+            "status": "All systems operational",
+            "language": "Language"
+        }
+    }
+}

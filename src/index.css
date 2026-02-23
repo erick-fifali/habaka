@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #137fec;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #101922;
+
+  --font-display: "Inter", sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(19, 127, 236, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  }
+}

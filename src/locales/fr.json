@@ -1,0 +1,146 @@
+{
+    "translation": {
+        "header": {
+            "services": "Services",
+            "whyUs": "Pourquoi Nous",
+            "about": "À Propos",
+            "contact": "Contact",
+            "getStarted": "Commencer"
+        },
+        "hero": {
+            "badge": "Nouvel Hébergement Haute Performance",
+            "title1": "Votre Présence Numérique,",
+            "title2": "Élevée",
+            "title3": "Au-delà des Nuages",
+            "subtitle": "Développement de logiciels sans faille et solutions d'hébergement hautes performances adaptées à la croissance de votre entreprise. Découvrez la liberté d'un ciel sans limites.",
+            "cta": "Démarrer Votre Projet"
+        },
+        "services": {
+            "software": {
+                "badge": "Expertise Logicielle",
+                "title1": "Développements logiciel",
+                "title2": "Sur mesure",
+                "subtitle": "Que vous ayez besoin d’un site vitrine, d’une boutique en ligne ou d’une plateforme de gestion pour votre association, Habaka vous propose des solutions complètes et flexibles.",
+                "showcase": {
+                    "title": "Sites vitrines",
+                    "desc": "Valorisez votre image de marque."
+                },
+                "ecommerce": {
+                    "title": "Sites e-commerce",
+                    "desc": "Développez vos ventes en ligne."
+                },
+                "blogs": {
+                    "title": "Blogs pro",
+                    "desc": "Partagez votre expertise."
+                },
+                "portfolios": {
+                    "title": "Portfolios",
+                    "desc": "Exposez vos meilleures créations."
+                },
+                "redesign": {
+                    "title": "Refonte de sites existants",
+                    "desc": "Modernisez votre présence digitale sans perdre vos acquis."
+                }
+            },
+            "maintenance": {
+                "badge": "Partenariat Long Terme",
+                "title1": "Maintenance et",
+                "title2": "Accompagnement Continu",
+                "subtitle": "Votre activité évolue, votre site web aussi. Plus qu’un simple fournisseur, nous sommes votre partenaire sur le long terme pour garantir performance et sécurité.",
+                "updates": {
+                    "title": "Mises à jour régulières",
+                    "desc": "Nous veillons à ce que vos systèmes restent à la pointe de la technologie et de la sécurité."
+                },
+                "support": {
+                    "title": "Support réactif",
+                    "desc": "Une question ? Un besoin ? Notre équipe technique vous répond dans les plus brefs délais."
+                },
+                "reports": {
+                    "title": "Rapports simplifiés",
+                    "desc": "Comprenez l'état de votre infrastructure grâce à des rapports clairs et exploitables."
+                },
+                "advice": {
+                    "title": "Conseils proactifs",
+                    "desc": "Nous anticipons vos besoins pour optimiser vos outils avant même que vous ne le demandiez."
+                }
+            },
+            "hosting": {
+                "badge": "Hébergement Souverain",
+                "title1": "Votre Coffre-Fort",
+                "title2": "Numérique",
+                "subtitle": "Protégez et centralisez les fichiers essentiels à votre activité. Profitez d'une infrastructure robuste avec des données hébergées au Canada ou localement pour une souveraineté totale.",
+                "cta": "Sécuriser mes données",
+                "features": {
+                    "f1": "Données hébergées au Canada",
+                    "f2": "Accès facile et sécurisé",
+                    "f3": "Partage de fichiers simplifié",
+                    "f4": "Sauvegardes automatiques",
+                    "f5": "Support de proximité"
+                }
+            }
+        },
+        "whyUs": {
+            "badge": "L'Avantage Habaka",
+            "title": "Pourquoi Choisir Habaka",
+            "subtitle": "Nous croyons en un monde numérique rapide, stable et incroyablement simple à gérer.",
+            "simplicity": {
+                "title": "Simplicité",
+                "desc": "Des processus rationalisés qui transforment la complexité en clarté. Nous supprimons le bruit pour que vous puissiez vous concentrer sur ce qui compte le plus."
+            },
+            "tailored": {
+                "title": "Solution Sur Mesure",
+                "desc": "Des logiciels sur mesure conçus pour s'adapter à l'ADN unique de votre entreprise. Pas de modèles, juste une ingénierie parfaitement alignée."
+            },
+            "support": {
+                "title": "Bon Support",
+                "desc": "Une équipe dédiée et toujours joignable, garantissant que vous n'êtes jamais dans le noir. Nous sommes partenaires de votre réussite à long terme."
+            },
+            "stability": {
+                "title": "Stabilité",
+                "desc": "Un hébergement fiable et un code robuste qui évoluent avec votre ambition. Conçu pour résister aux exigences d'une infrastructure mondiale."
+            },
+            "responsible": {
+                "title": "Choix Responsable",
+                "desc": "Développement éthique et pratiques durables pour un partenariat à long terme. Nous croyons en la création de logiciels ayant un impact positif sur le paysage numérique."
+            },
+            "ctaBox": {
+                "title": "Prêt à élever votre projet ?",
+                "subtitle": "Rejoignez plus de 500 entreprises qui se développent sur la plateforme Habaka.",
+                "button": "Planifier une Consultation"
+            }
+        },
+        "contact": {
+            "badge": "Contactez Notre Équipe",
+            "title1": "Construisons quelque chose de grand",
+            "title2": "ensemble.",
+            "subtitle": "Nous sommes là pour vous aider à transformer vos idées en réalité. Contactez-nous et commençons à discuter de votre prochain projet.",
+            "form": {
+                "name": "Nom Complet",
+                "namePlaceholder": "ex: Jean Dupont",
+                "email": "Adresse E-mail",
+                "emailPlaceholder": "nom@entreprise.com",
+                "subject": "Sujet",
+                "subjectPlaceholder": "Sélectionnez un sujet",
+                "options": {
+                    "web": "Développement Web",
+                    "mobile": "Applications Mobiles",
+                    "cloud": "Solutions Cloud",
+                    "consulting": "Demande Générale"
+                },
+                "message": "Message",
+                "messagePlaceholder": "Parlez-nous de votre projet...",
+                "submit": "Envoyer le Message"
+            },
+            "methods": {
+                "email": "hello@habaka.io",
+                "location": "San Francisco, CA",
+                "time": "Lun-Ven, 9h - 18h"
+            }
+        },
+        "footer": {
+            "rights": "© {{year}} Habaka Solutions Numériques. Tous droits réservés.",
+            "status": "Tous les systèmes sont opérationnels",
+            "language": "Langue"
+        }
+    }
+}
