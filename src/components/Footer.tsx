@@ -20,9 +20,6 @@ export default function Footer() {
                 <div className="pt-8 border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
                     <p>{t('footer.rights', { year: currentYear })}</p>
                     <div className="flex gap-8 items-center">
-                        <span className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> {t('footer.status')}
-                        </span>
                         <select
                             className="bg-transparent border border-slate-300 rounded px-2 py-1 text-slate-600 focus:outline-none focus:ring-2 focus:ring-primary/50"
                             onChange={changeLanguage}
