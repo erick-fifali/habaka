@@ -9,20 +9,19 @@
         },
         "hero": {
             "badge": "Nouvel Hébergement Haute Performance",
-            "title1": "Votre Présence Numérique,",
-            "title2_0": "Élevée",
+            "title1": "Votre présence digitale,",
+            "title2_0": "simplifiée",
             "title2_1": "Optimisée",
             "title2_2": "Modernisée",
-            "title3": "Au-delà des Nuages",
-            "subtitle": "Développement de logiciels sans faille et solutions d'hébergement hautes performances adaptées à la croissance de votre entreprise. Découvrez la liberté d'un ciel sans limites.",
-            "cta": "Démarrer Votre Projet"
+            "subtitle": "Nous fournissons des solutions fiables et de haute qualité pour vos besoins numériques.",
+            "cta": "En savoir plus"
         },
         "services": {
             "software": {
                 "badge": "Expertise Logicielle",
                 "title1": "Développements logiciel",
                 "title2": "Sur mesure",
-                "subtitle": "Que vous ayez besoin d’un site vitrine, d’une boutique en ligne ou d’une plateforme de gestion pour votre association, Habaka vous propose des solutions complètes et flexibles.",
+                "subtitle": "Nous simplifions la digitalisation pour que vous puissiez vous concentrer sur votre métier. Habaka est né d’une conviction : chaque artisan, commerçant ou association mérite une présence en ligne professionnelle, sans les tracas techniques. C’est pourquoi nous vous offrons un accompagnement personnalisé, des solutions web sur mesure et un service fiable pour donner vie à votre projet digital.",
                 "showcase": {
                     "title": "Sites vitrines",
                     "desc": "Valorisez votre image de marque."
@@ -48,14 +47,14 @@
                 "badge": "Partenariat Long Terme",
                 "title1": "Maintenance et",
                 "title2": "Accompagnement Continu",
-                "subtitle": "Votre activité évolue, votre site web aussi. Plus qu’un simple fournisseur, nous sommes votre partenaire sur le long terme pour garantir performance et sécurité.",
+                "subtitle": "Votre activité évolue, votre site web aussi. Plus qu’un simple fournisseur, nous sommes votre partenaire sur le long terme. Nous assurons la maintenance technique de votre site et restons à vos côtés pour vous conseiller et répondre à vos besoins.",
                 "updates": {
                     "title": "Mises à jour régulières",
                     "desc": "Nous veillons à ce que vos systèmes restent à la pointe de la technologie et de la sécurité."
                 },
                 "support": {
                     "title": "Support réactif",
-                    "desc": "Une question ? Un besoin ? Notre équipe technique vous répond dans les plus brefs délais."
+                    "desc": "Une question ? Un besoin ? nous sommes là."
                 },
                 "reports": {
                     "title": "Rapports simplifiés",
@@ -87,27 +86,27 @@
             "subtitle": "Nous croyons en un monde numérique rapide, stable et incroyablement simple à gérer.",
             "simplicity": {
                 "title": "Simplicité",
-                "desc": "Des processus rationalisés qui transforment la complexité en clarté. Nous supprimons le bruit pour que vous puissiez vous concentrer sur ce qui compte le plus."
+                "desc": "Fini les maux de tête techniques ! Nous gérons tout, de la conception à la mise en ligne, avec un processus clair et intuitif. Nous supprimons le bruit pour que vous puissiez vous concentrer sur ce qui compte le plus."
             },
             "tailored": {
                 "title": "Solution Sur Mesure",
-                "desc": "Des logiciels sur mesure conçus pour s'adapter à l'ADN unique de votre entreprise. Pas de modèles, juste une ingénierie parfaitement alignée."
+                "desc": "Nous ne proposons pas de taille unique. Chaque solution est conçue spécifiquement pour répondre aux objectifs uniques de votre entreprise ou association."
             },
             "support": {
-                "title": "Bon Support",
-                "desc": "Une équipe dédiée et toujours joignable, garantissant que vous n'êtes jamais dans le noir. Nous sommes partenaires de votre réussite à long terme."
+                "title": "Proximité & Accompagnement",
+                "desc": "Oubliez les plateformes impersonnelles. Vous avez accès à une équipe dédiée qui comprend vos besoins et vous guide à chaque étape."
             },
             "stability": {
                 "title": "Stabilité",
-                "desc": "Un hébergement fiable et un code robuste qui évoluent avec votre ambition. Conçu pour résister aux exigences d'une infrastructure mondiale."
+                "desc": "Votre projet est entre de bonnes mains. Profitez d’un infrastructure robuste et sécurisé pour une présence en ligne sans interruption."
             },
             "responsible": {
                 "title": "Choix Responsable",
-                "desc": "Développement éthique et pratiques durables pour un partenariat à long terme. Nous croyons en la création de logiciels ayant un impact positif sur le paysage numérique."
+                "desc": "Optez pour une solution écologique et performante. Grâce à nos serveurs intégrant des composants revalorisés, vous bénéficiez de coûts abordables tout en réduisant votre empreinte environnementale. Une démarche gagnant-gagnant pour votre budget et la planète."
             },
             "ctaBox": {
                 "title": "Prêt à élever votre projet ?",
-                "subtitle": "Rejoignez plus de 500 entreprises qui se développent sur la plateforme Habaka.",
+                "subtitle": "Nous sommes là pour vous aider à concrétiser votre vision.",
                 "button": "Planifier une Consultation"
             }
         },
@@ -135,12 +134,12 @@
             },
             "methods": {
                 "email": "hello@habaka.io",
-                "location": "San Francisco, CA",
+                "location": "Montréal, QC, Canada",
                 "time": "Lun-Ven, 9h - 18h"
             }
         },
         "footer": {
-            "rights": "© {{year}} Habaka Solutions Numériques. Tous droits réservés.",
+            "rights": "© {{year}} Habaka. Tous droits réservés.",
             "status": "Tous les systèmes sont opérationnels",
             "language": "Langue"
         }

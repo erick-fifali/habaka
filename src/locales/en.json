@@ -13,8 +13,7 @@
             "title2_0": "Elevated",
             "title2_1": "Optimized",
             "title2_2": "Modernized",
-            "title3": "Beyond the Clouds",
-            "subtitle": "Seamless software development and high-performance hosting solutions tailored for your business growth. Experience the freedom of a limitless sky.",
+            "subtitle": "We provide reliable, high-quality solutions for your digital needs.",
             "cta": "Start Your Project"
         },
         "services": {
@@ -22,7 +21,7 @@
                 "badge": "Software Expertise",
                 "title1": "Custom",
                 "title2": "Software Solutions",
-                "subtitle": "Whether you need a showcase site, an online store, or a management platform for your association, Habaka offers comprehensive and flexible solutions.",
+                "subtitle": "We simplify digitalization so you can focus on your core business. Habaka was born from a conviction: every craftsman, merchant, or association deserves a professional online presence, without the technical hassles. That's why we offer personalized support, custom web solutions, and a reliable service to bring your digital project to life.",
                 "showcase": {
                     "title": "Showcase sites",
                     "desc": "Enhance your brand image."
@@ -48,7 +47,7 @@
                 "badge": "Long Term Partnership",
                 "title1": "Maintenance and",
                 "title2": "Continuous Support",
-                "subtitle": "Your business is evolving, and so is your website. More than just a provider, we are your long-term partner to guarantee performance and security.",
+                "subtitle": "Your business is evolving, and so is your website. More than just a provider, we are your long-term partner. We provide technical maintenance for your site and stay by your side to advise you and meet your needs.",
                 "updates": {
                     "title": "Regular updates",
                     "desc": "We ensure your systems stay at the forefront of technology and security."
@@ -87,27 +86,27 @@
             "subtitle": "We believe in a digital world that is fast, stable, and incredibly simple to manage.",
             "simplicity": {
                 "title": "Simplicity",
-                "desc": "Streamlined processes that turn complexity into clarity. We remove the noise so you can focus on what matters most."
+                "desc": "No more technical headaches! We manage everything, from design to launch, with a clear and intuitive process. We remove the noise so you can focus on what matters most."
             },
             "tailored": {
                 "title": "Tailored Solution",
-                "desc": "Custom-built software designed to fit your unique business DNA. No templates, just perfectly aligned engineering."
+                "desc": "We don't offer a one-size-fits-all approach. Each solution is specifically designed to meet the unique goals of your business or association."
             },
             "support": {
-                "title": "Good Support",
-                "desc": "A dedicated team that’s always reachable, ensuring you're never in the dark. We are partners in your long-term success."
+                "title": "Proximity & Support",
+                "desc": "Forget impersonal platforms. You have access to a dedicated team that understands your needs and guides you at every step."
             },
             "stability": {
                 "title": "Stability",
-                "desc": "Reliable hosting and robust code that scales with your ambition. Built to withstand the demands of global infrastructure."
+                "desc": "Your project is in good hands. Enjoy a robust and secure infrastructure for an uninterrupted online presence."
             },
             "responsible": {
                 "title": "Responsible Choice",
-                "desc": "Ethical development and sustainable practices for a long-term partnership. We believe in building software that makes a positive impact on the digital landscape."
+                "desc": "Opt for an ecological and high-performance solution. Thanks to our servers integrating upcycled components, you benefit from affordable costs while reducing your environmental footprint. A win-win approach for your budget and the planet."
             },
             "ctaBox": {
                 "title": "Ready to elevate your project?",
-                "subtitle": "Join 500+ businesses growing on the Habaka platform.",
+                "subtitle": "We are here to help you bring your vision to life.",
                 "button": "Schedule a Consultation"
             }
         },
@@ -135,12 +134,12 @@
             },
             "methods": {
                 "email": "hello@habaka.io",
-                "location": "San Francisco, CA",
+                "location": "Montreal, QC, Canada",
                 "time": "Mon-Fri, 9am - 6pm"
             }
         },
         "footer": {
-            "rights": "© {{year}} Habaka Digital Solutions. All rights reserved.",
+            "rights": "© {{year}} Habaka. All rights reserved.",
             "status": "All systems operational",
             "language": "Language"
         }

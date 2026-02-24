@@ -54,9 +54,7 @@ function App() {
               showCursor={true}
               cursorCharacter="_"
               deletingSpeed={50}
-            /> 
-            <br />
-            {t('hero.title3')}
+            />
           </motion.h1>
           <motion.p variants={itemVariants} className="text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-12 text-slate-500">
             {t('hero.subtitle')}
