@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import type { Variants } from 'motion/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import TextType from './components/TextType';
 import { useTranslation } from 'react-i18next';
 import './index.css';
 
@@ -43,8 +44,19 @@ function App() {
             {t('hero.badge')}
           </motion.div>
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8 max-w-4xl mx-auto text-slate-800">
-            {t('hero.title1')} <br />
-            <span className="text-primary italic">{t('hero.title2')}</span> {t('hero.title3')}
+            {t('hero.title1')} 
+            <br />
+            <TextType
+              className="text-primary italic"
+              text={[t('hero.title2_0'), t('hero.title2_1'), t('hero.title2_2')]}
+              typingSpeed={100}
+              pauseDuration={2000}
+              showCursor={true}
+              cursorCharacter="_"
+              deletingSpeed={50}
+            /> 
+            <br />
+            {t('hero.title3')}
           </motion.h1>
           <motion.p variants={itemVariants} className="text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-12 text-slate-500">
             {t('hero.subtitle')}

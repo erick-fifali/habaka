@@ -10,7 +10,9 @@
         "hero": {
             "badge": "New High-Performance Hosting",
             "title1": "Your Digital Presence,",
-            "title2": "Elevated",
+            "title2_0": "Elevated",
+            "title2_1": "Optimized",
+            "title2_2": "Modernized",
             "title3": "Beyond the Clouds",
             "subtitle": "Seamless software development and high-performance hosting solutions tailored for your business growth. Experience the freedom of a limitless sky.",
             "cta": "Start Your Project"

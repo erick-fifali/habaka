@@ -10,7 +10,9 @@
         "hero": {
             "badge": "Nouvel Hébergement Haute Performance",
             "title1": "Votre Présence Numérique,",
-            "title2": "Élevée",
+            "title2_0": "Élevée",
+            "title2_1": "Optimisée",
+            "title2_2": "Modernisée",
             "title3": "Au-delà des Nuages",
             "subtitle": "Développement de logiciels sans faille et solutions d'hébergement hautes performances adaptées à la croissance de votre entreprise. Découvrez la liberté d'un ciel sans limites.",
             "cta": "Démarrer Votre Projet"
