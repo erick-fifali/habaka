@@ -1,5 +1,8 @@
+import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import type { Variants } from 'motion/react';
+import { Turnstile } from '@marsidev/react-turnstile';
+import type { TurnstileInstance } from '@marsidev/react-turnstile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TextType from './components/TextType';
@@ -8,6 +11,56 @@ import './index.css';
 
 function App() {
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!turnstileToken) {
+      // In production, you might show a proper toast notification here instead
+      alert('Please complete the captcha verification.');
+      return;
+    }
+
+    setFormStatus('loading');
+
+    const formDataObj = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formDataObj.entries());
+    data['cf-turnstile-response'] = turnstileToken;
+
+    try {
+      // This endpoint needs to be created on the backend
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        turnstileRef.current?.reset();
+        setTimeout(() => setFormStatus('idle'), 5000); // Reset status message after 5s
+      } else {
+        setFormStatus('error');
+        turnstileRef.current?.reset();
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setFormStatus('error');
+      turnstileRef.current?.reset();
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,7 +90,7 @@ function App() {
           className="max-w-7xl mx-auto px-6 text-center"
         >
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8 max-w-4xl mx-auto text-slate-800">
-            {t('hero.title1')} 
+            {t('hero.title1')}
             <br />
             <TextType
               className="text-primary italic"
@@ -363,18 +416,37 @@ function App() {
           transition={{ duration: 0.6 }}
           className="w-full max-w-2xl bg-white dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/60 rounded-2xl shadow-2xl shadow-slate-200/40 dark:shadow-none p-8 md:p-12"
         >
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            {/* Honeypot Field to trap bots */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              <input type="text" name="hp_field" tabIndex={-1} autoComplete="off" />
+            </div>
+
+            {formStatus === 'success' && (
+              <div className="p-4 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-xl border border-green-200 dark:border-green-800 flex items-center gap-3">
+                <span className="material-symbols-outlined">check_circle</span>
+                <p>{t('contact.form.success') || 'Your message has been sent successfully!'}</p>
+              </div>
+            )}
+
+            {formStatus === 'error' && (
+              <div className="p-4 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-xl border border-red-200 dark:border-red-800 flex items-center gap-3">
+                <span className="material-symbols-outlined">error</span>
+                <p>{t('contact.form.error') || 'Failed to send message. Please try again later.'}</p>
+              </div>
+            )}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Full Name */}
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1" htmlFor="name">{t('contact.form.name')}</label>
-                <input className="w-full h-14 px-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" id="name" name="name" placeholder={t('contact.form.namePlaceholder')} type="text" />
+                <input required value={formData.name} onChange={handleInputChange} className="w-full h-14 px-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" id="name" name="name" placeholder={t('contact.form.namePlaceholder')} type="text" />
               </div>
 
               {/* Email */}
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1" htmlFor="email">{t('contact.form.email')}</label>
-                <input className="w-full h-14 px-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" id="email" name="email" placeholder={t('contact.form.emailPlaceholder')} type="email" />
+                <input required value={formData.email} onChange={handleInputChange} className="w-full h-14 px-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" id="email" name="email" placeholder={t('contact.form.emailPlaceholder')} type="email" />
               </div>
             </div>
 
@@ -382,7 +454,7 @@ function App() {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1" htmlFor="subject">{t('contact.form.subject')}</label>
               <div className="relative">
-                <select defaultValue="" className="w-full h-14 pl-4 pr-10 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white appearance-none focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" id="subject" name="subject">
+                <select required value={formData.subject} onChange={handleInputChange} className="w-full h-14 pl-4 pr-10 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white appearance-none focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" id="subject" name="subject">
                   <option disabled value="">{t('contact.form.subjectPlaceholder')}</option>
                   <option value="web">{t('contact.form.options.web')}</option>
                   <option value="mobile">{t('contact.form.options.mobile')}</option>
@@ -398,13 +470,37 @@ function App() {
             {/* Message */}
             <div className="space-y-2">
               <label className="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1" htmlFor="message">{t('contact.form.message')}</label>
-              <textarea className="w-full px-4 py-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all resize-none" id="message" name="message" placeholder={t('contact.form.messagePlaceholder')} rows={5}></textarea>
+              <textarea required value={formData.message} onChange={handleInputChange} className="w-full px-4 py-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all resize-none" id="message" name="message" placeholder={t('contact.form.messagePlaceholder')} rows={5}></textarea>
+            </div>
+
+            {/* Turnstile Widget */}
+            <div className="flex justify-center my-4 overflow-hidden rounded-xl">
+              <Turnstile
+                ref={turnstileRef}
+                siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'} // Testing key as fallback
+                onSuccess={(token) => setTurnstileToken(token)}
+                onError={() => setFormStatus('error')}
+                options={{ theme: 'auto' }}
+              />
             </div>
 
             {/* Submit */}
-            <button className="w-full h-14 bg-primary hover:bg-primary/90 text-white text-lg font-bold rounded-xl transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2 group" type="submit">
-              {t('contact.form.submit')}
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+            <button
+              disabled={formStatus === 'loading'}
+              className="w-full h-14 bg-primary hover:bg-primary/90 disabled:bg-primary/50 disabled:cursor-not-allowed text-white text-lg font-bold rounded-xl transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2 group"
+              type="submit"
+            >
+              {formStatus === 'loading' ? (
+                <>
+                  <span className="material-symbols-outlined animate-spin">refresh</span>
+                  {t('contact.form.sending') || 'Sending...'}
+                </>
+              ) : (
+                <>
+                  {t('contact.form.submit')}
+                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+                </>
+              )}
             </button>
           </form>
         </motion.div>
