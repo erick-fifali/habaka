@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Habaka - Your Digital Presence, Elevated</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(19, 127, 236, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-white font-display selection:bg-primary/20 text-slate-800">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 border-b border-slate-100 glass-nav">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl font-bold">cloud</span>
+</div>
+<span class="text-2xl font-black tracking-tight text-slate-800">Habaka</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-500" href="#services">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-500" href="#why-us">Why Us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-500" href="#about">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-500" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    Get Started
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative pt-32 overflow-hidden hero-gradient pb-40">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                New High-Performance Hosting
+            </div>
+<h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8 max-w-4xl mx-auto text-slate-800">
+                Your Digital Presence, <br/>
+<span class="text-primary italic">Elevated</span> Beyond the Clouds
+            </h1>
+<p class="text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-12 text-slate-500">
+                Seamless software development and high-performance hosting solutions tailored for your business growth. Experience the freedom of a limitless sky.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-10 py-4 bg-primary text-white text-base font-bold rounded-xl hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 transition-all">
+                    Start Your Project
+                </button>
+
+</div>
+<!-- Abstract visual representation -->
+</div>
+</main>
+<!-- Services Section -->
+<section class="py-24 bg-white" id="services">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Our Expertise</h2>
+<h3 class="text-4xl font-bold tracking-tight text-slate-800">Tailored Digital Solutions</h3>
+<p class="mt-4 text-lg text-slate-500">We provide end-to-end services to build, host, and maintain your digital infrastructure with unparalleled precision.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                    Explore all services 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Custom Software -->
+<div class="p-10 rounded-2xl bg-slate-50 hover:bg-primary/5 border border-slate-100 transition-all group">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-800">Custom Software</h4>
+<p class="leading-relaxed text-slate-500">
+                        Bespoke applications designed from the ground up to match your unique workflow and business requirements.
+                    </p>
+</div>
+<!-- Web Hosting -->
+<div class="p-10 rounded-2xl bg-slate-50 hover:bg-primary/5 border border-slate-100 transition-all group">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">dns</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-800">Web Hosting</h4>
+<p class="leading-relaxed text-slate-500">
+                        Reliable, high-speed cloud infrastructure with 99.9% uptime and enterprise-grade security protocols.
+                    </p>
+</div>
+<!-- Maintenance -->
+<div class="p-10 rounded-2xl bg-slate-50 hover:bg-primary/5 border border-slate-100 transition-all group">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-800">Maintenance</h4>
+<p class="leading-relaxed text-slate-500">
+                        Proactive updates, performance monitoring, and security patches to keep your digital assets safe and optimized.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 bg-slate-900 text-white overflow-hidden relative" id="why-us">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+<svg class="h-full w-full" viewbox="0 0 100 100">
+<circle cx="100" cy="0" fill="none" r="80" stroke="white" stroke-width="0.5"></circle>
+<circle cx="100" cy="0" fill="none" r="60" stroke="white" stroke-width="0.5"></circle>
+<circle cx="100" cy="0" fill="none" r="40" stroke="white" stroke-width="0.5"></circle>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="max-w-3xl mb-16">
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-3">The Habaka Advantage</h2>
+<h3 class="text-4xl md:text-5xl font-bold tracking-tight">Why Choose Habaka</h3>
+<p class="text-slate-400 mt-6 text-lg">We believe in a digital world that is fast, stable, and incredibly simple to manage.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-4xl shrink-0">wb_sunny</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Simplicity</h4>
+<p class="text-slate-400 leading-relaxed">We remove the technical complexity, giving you a clear path to your digital goals without the jargon.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-4xl shrink-0">anchor</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Stability</h4>
+<p class="text-slate-400 leading-relaxed">Our infrastructure is built on rock-solid foundations, ensuring your services stay up when it matters most.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-4xl shrink-0">support_agent</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Personalized Support</h4>
+<p class="text-slate-400 leading-relaxed">Real humans, real solutions. We provide direct access to the experts who built your platform.</p>
+</div>
+</div>
+</div>
+<div class="mt-20 p-8 md:p-12 rounded-3xl bg-primary/10 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h5 class="text-2xl font-bold mb-2">Ready to elevate your project?</h5>
+<p class="text-slate-400">Join 500+ businesses growing on the Habaka platform.</p>
+</div>
+<button class="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all whitespace-nowrap">
+                    Schedule a Consultation
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white pt-24 pb-12 border-t border-slate-100">
+<div class="max-w-7xl mx-auto px-6"><div class="flex items-center gap-3 mb-8 justify-center md:justify-start"><span class="material-symbols-outlined text-3xl text-primary font-bold">cloud</span><span class="text-2xl font-black tracking-tight text-slate-800">Habaka</span></div>
+
+<div class="pt-8 border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+<p>© 2024 Habaka Digital Solutions. All rights reserved.</p>
+<div class="flex gap-8">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> All systems operational</span>
+<span>English (US)</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
