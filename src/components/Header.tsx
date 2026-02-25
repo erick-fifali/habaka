@@ -43,7 +43,7 @@ export default function Header() {
                     <a className="text-sm font-medium hover:text-primary transition-colors text-slate-500" href="#contact">{t('header.contact')}</a>
                 </div>
                 <div className="flex items-center gap-4">
-                    <button className="px-6 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-6 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
                         {t('header.getStarted')}
                     </button>
                 </div>

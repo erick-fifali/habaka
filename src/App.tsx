@@ -106,7 +106,7 @@ function App() {
             {t('hero.subtitle')}
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto px-10 py-4 bg-primary text-white text-base font-bold rounded-xl hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 transition-all">
+            <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto px-10 py-4 bg-primary text-white text-base font-bold rounded-xl hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 transition-all">
               {t('hero.cta')}
             </button>
           </motion.div>
@@ -243,25 +243,25 @@ function App() {
                 variants={containerVariants}
                 className="relative z-10 grid grid-cols-1 gap-4"
               >
-                <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm">
-                  <span className="material-symbols-outlined text-primary">public</span>
-                  <span className="font-medium">{t('services.hosting.features.f1')}</span>
+                <motion.div variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="group flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default">
+                  <span className="material-symbols-outlined text-primary group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">public</span>
+                  <span className="font-medium group-hover:text-primary transition-colors duration-300">{t('services.hosting.features.f1')}</span>
                 </motion.div>
-                <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm ml-4 md:ml-8">
-                  <span className="material-symbols-outlined text-primary">verified_user</span>
-                  <span className="font-medium">{t('services.hosting.features.f2')}</span>
+                <motion.div variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="group flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default ml-4 md:ml-8">
+                  <span className="material-symbols-outlined text-primary group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">verified_user</span>
+                  <span className="font-medium group-hover:text-primary transition-colors duration-300">{t('services.hosting.features.f2')}</span>
                 </motion.div>
-                <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm ml-8 md:ml-16">
-                  <span className="material-symbols-outlined text-primary">share</span>
-                  <span className="font-medium">{t('services.hosting.features.f3')}</span>
+                <motion.div variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="group flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default ml-8 md:ml-16">
+                  <span className="material-symbols-outlined text-primary group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">share</span>
+                  <span className="font-medium group-hover:text-primary transition-colors duration-300">{t('services.hosting.features.f3')}</span>
                 </motion.div>
-                <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm ml-4 md:ml-8">
-                  <span className="material-symbols-outlined text-primary">backup</span>
-                  <span className="font-medium">{t('services.hosting.features.f4')}</span>
+                <motion.div variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="group flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default ml-4 md:ml-8">
+                  <span className="material-symbols-outlined text-primary group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300">backup</span>
+                  <span className="font-medium group-hover:text-primary transition-colors duration-300">{t('services.hosting.features.f4')}</span>
                 </motion.div>
-                <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm">
-                  <span className="material-symbols-outlined text-primary">near_me</span>
-                  <span className="font-medium">{t('services.hosting.features.f5')}</span>
+                <motion.div variants={itemVariants} whileHover={{ scale: 1.02, x: 5 }} className="group flex items-center gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default">
+                  <span className="material-symbols-outlined text-primary group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">near_me</span>
+                  <span className="font-medium group-hover:text-primary transition-colors duration-300">{t('services.hosting.features.f5')}</span>
                 </motion.div>
               </motion.div>
               {/* Abstract Graphic Shape */}
@@ -283,7 +283,7 @@ function App() {
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 {t('services.hosting.subtitle')}
               </p>
-              <button className="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all group shadow-xl">
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all group shadow-xl">
                 {t('services.hosting.cta')}
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </button>
@@ -376,7 +376,7 @@ function App() {
               <h5 className="text-2xl font-bold mb-2">{t('whyUs.ctaBox.title')}</h5>
               <p className="text-slate-400">{t('whyUs.ctaBox.subtitle')}</p>
             </div>
-            <button className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all whitespace-nowrap shadow-lg shadow-primary/20 hover:scale-[1.02]">
+            <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all whitespace-nowrap shadow-lg shadow-primary/20 hover:scale-[1.02]">
               {t('whyUs.ctaBox.button')}
             </button>
           </motion.div>
