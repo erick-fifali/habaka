@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 import './TextType.css';
 
 export interface TextTypeProps {
     text: string | string[];
-    as?: any;
+    as?: React.ElementType;
     typingSpeed?: number;
     initialDelay?: number;
     pauseDuration?: number;
@@ -21,7 +21,7 @@ export interface TextTypeProps {
     onSentenceComplete?: (sentence: string, index: number) => void;
     startOnVisible?: boolean;
     reverseMode?: boolean;
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 const TextType = ({
@@ -165,30 +165,31 @@ const TextType = ({
         isVisible,
         reverseMode,
         variableSpeed,
-        onSentenceComplete
+        onSentenceComplete,
+        getRandomSpeed
     ]);
 
     const shouldHideCursor =
         hideCursorWhileTyping && textArray[currentTextIndex] && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
 
-    return createElement(
-        Component,
-        {
-            ref: containerRef,
-            className: `text-type ${className}`,
-            ...props
-        },
-        <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
-            {displayedText}
-        </span>,
-        showCursor && (
-            <span
-                ref={cursorRef}
-                className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? 'text-type__cursor--hidden' : ''}`}
-            >
-                {cursorCharacter}
+    return (
+        <Component
+            ref={containerRef}
+            className={`text-type ${className}`}
+            {...props as Record<string, unknown>}
+        >
+            <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
+                {displayedText}
             </span>
-        )
+            {showCursor && (
+                <span
+                    ref={cursorRef as React.RefObject<HTMLSpanElement>}
+                    className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? 'text-type__cursor--hidden' : ''}`}
+                >
+                    {cursorCharacter}
+                </span>
+            )}
+        </Component>
     );
 };
 
