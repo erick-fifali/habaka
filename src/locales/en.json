@@ -133,7 +133,7 @@
                 "submit": "Send Message"
             },
             "methods": {
-                "email": "hello@habaka.io",
+                "email": "hello@habaka.ca",
                 "location": "Montreal, QC, Canada",
                 "time": "Mon-Fri, 9am - 6pm"
             }
