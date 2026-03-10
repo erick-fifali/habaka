@@ -30,7 +30,8 @@ const ContactSection = () => {
         data['cf-turnstile-response'] = turnstileToken;
 
         try {
-            const response = await fetch('/api/contact', {
+            const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
+            const response = await fetch(`${baseUrl}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
